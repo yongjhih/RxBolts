@@ -50,6 +50,7 @@ public class TaskObservable {
                 return null;
             });
         });
+        // TODO .doOnUnsubscribe(() -> task.setCancelled());
     }
 
     public static <R> Observable<R> justNullable(Task<R> task) {
