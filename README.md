@@ -91,7 +91,7 @@ TaskObservable.defer(() -> failedTask).subscribe(it -> {
 
 ## Sample code
 
-* [RxParse](https://github.com/yongjhih/RxParse): https://github.com/yongjhih/RxParse/blob/master/rxparse/src/main/java/rx/parse/ParseObservable.java
+* https://github.com/yongjhih/RxParse/blob/master/rxparse/src/main/java/rx/parse/ParseObservable.java
 
 ## Installation
 
