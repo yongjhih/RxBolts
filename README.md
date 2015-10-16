@@ -20,8 +20,6 @@ TaskObservable.defer():
 Task<String> helloTask = Task.forResult("Hello, world!");
 TaskObservable.defer(() -> helloTask).subscribe(it -> {
   System.out.println(it);
-}, e -> {
-  // ..
 });
 ```
 
@@ -48,11 +46,7 @@ TaskObservable.defer() with nullTask:
 
 ```java
 Task<String> nullTask = Task.forResult(null);
-TaskObservable.defer(() -> nullTask).subscribe(it -> {
-  // ..
-}, e -> {
-  // ..
-}, () -> {
+TaskObservable.defer(() -> nullTask).subscribe(it -> {}, e -> {}, () -> {
   System.out.println("onCompleted");
 });
 ```
@@ -63,15 +57,11 @@ TaskObservable.deferNullable():
 Task<String> helloTask = Task.forResult("Hello, world!");
 TaskObservable.deferNullable(() -> helloTask).subscribe(it -> {
   System.out.println(it);
-}, e -> {
-  // ..
 });
 
 Task<String> nullTask = Task.forResult(null);
 TaskObservable.deferNullable(() -> nullTask).subscribe(it -> {
   System.out.println(it); // print null
-}, e -> {
-  // ..
 });
 ```
 
@@ -82,14 +72,10 @@ Task<String> helloTask = Task.forResult("Hello, world!");
 
 TaskObservable.deferNonNull(() -> helloTask).subscribe(it -> {
   System.out.println(it);
-}, e -> {
-  // ..
 });
 
 Task<String> nullTask = Task.forResult(null);
-TaskObservable.deferNonNull(() -> nullTask).subscribe(it -> {
-  // ..
-}, e -> {
+TaskObservable.deferNonNull(() -> nullTask).subscribe(it -> {}, e -> {
   e.printStackTrace(); // NullPointerException
 });
 
@@ -101,10 +87,8 @@ Failed:
 
 ```java
 Task<String> failedTask = Task.forError(new RuntimeException("An error message."));
-TaskObservable.defer(() -> failedTask).subscribe(it -> {
-  // ..
-}, e -> {
-  e.printStackTrace();
+TaskObservable.defer(() -> failedTask).subscribe(it -> {}, e -> {
+  e.printStackTrace(); // RuntimeException
 });
 ```
 
