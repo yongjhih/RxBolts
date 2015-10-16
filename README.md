@@ -65,6 +65,17 @@ TaskObservable.deferNullable(() -> nullTask).subscribe(it -> {
 });
 ```
 
+TaskObservable.deferNullable(): print updated location of 5 users using Parse:
+
+```java
+TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).flatMap(user -> {
+  user.put("location", "Taipei");
+  return TaskObservable.deferNullable(() -> user.saveInBackground()).map(it -> user);
+}).subscribe(user -> {
+  System.out.println(user.getObjectId());
+});
+```
+
 TaskObservable.deferNonNull():
 
 ```java
