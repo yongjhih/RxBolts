@@ -33,6 +33,17 @@ TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).subs
 });
 ```
 
+Update location of 5 users using Parse:
+
+```java
+TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).flatMap(user -> {
+  user.put("location", "Taiwan");
+  return TaskObservable.defer(() -> user.saveInBackground());
+}).subscribe(user -> {
+  System.out.println(user.getObjserId());
+});
+```
+
 TaskObservable.defer() with nullTask:
 
 ```java
