@@ -25,6 +25,14 @@ TaskObservable.defer(() -> helloTask).subscribe(it -> {
 });
 ```
 
+Take 5 users using Parse:
+
+```java
+TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).subscribe(user -> {
+  System.out.println(user.getObjserId());
+});
+```
+
 TaskObservable.defer() with nullTask:
 
 ```java
