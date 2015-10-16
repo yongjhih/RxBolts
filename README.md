@@ -37,7 +37,7 @@ Update location of 5 users using Parse:
 
 ```java
 TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).flatMap(user -> {
-  user.put("location", "Taiwan");
+  user.put("location", "Taipei");
   return TaskObservable.defer(() -> user.saveInBackground());
 }).subscribe(it -> {}, e -> {}, () -> {
   System.out.println("onCompleted");
