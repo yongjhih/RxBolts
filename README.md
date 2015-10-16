@@ -78,22 +78,11 @@ TaskObservable.deferNonNull(() -> nullTask).subscribe(it -> {
 
 ### Error handling
 
-Successful:
-
-```java
-Task<String> successful = Task.forResult("The good result.");
-TaskObservable.defer(() -> successful).subscribe(it -> {
-  System.out.println(it);
-}, e -> {
-  // ..
-});
-```
-
 Failed:
 
 ```java
-Task<String> failed = Task.forError(new RuntimeException("An error message."));
-TaskObservable.defer(() -> successful).subscribe(it -> {
+Task<String> failedTask = Task.forError(new RuntimeException("An error message."));
+TaskObservable.defer(() -> failedTask).subscribe(it -> {
   // ..
 }, e -> {
   e.printStackTrace();
