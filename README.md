@@ -37,12 +37,12 @@ Update location of 5 users using Parse:
 TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).flatMap(user -> {
   user.put("location", "Taipei");
   return TaskObservable.defer(() -> user.saveInBackground());
-}).subscribe(it -> {}, e -> {}, () -> {
-  System.out.println("onCompleted");
-});
+}).subscribe();
 ```
 
-TaskObservable.defer() with nullTask:
+### Null task handling
+
+TaskObservable.defer():
 
 ```java
 Task<String> nullTask = Task.forResult(null);
@@ -54,22 +54,19 @@ TaskObservable.defer(() -> nullTask).subscribe(it -> {}, e -> {}, () -> {
 TaskObservable.deferNullable():
 
 ```java
-Task<String> helloTask = Task.forResult("Hello, world!");
-TaskObservable.deferNullable(() -> helloTask).subscribe(it -> {
-  System.out.println(it);
-});
-
 Task<String> nullTask = Task.forResult(null);
 TaskObservable.deferNullable(() -> nullTask).subscribe(it -> {
   System.out.println(it); // print null
 });
 ```
 
-TaskObservable.deferNullable(): print updated location of 5 users using Parse:
+TaskObservable.deferNullable() for printing updated location of 5 users:
 
 ```java
 TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).flatMap(user -> {
   user.put("location", "Taipei");
+  // ParseUser.saveInBackground() returns Task<Void> conatins null
+  // Allow omit null with TaskObservable.deferNullable()
   return TaskObservable.deferNullable(() -> user.saveInBackground()).map(it -> user);
 }).subscribe(user -> {
   System.out.println(user.getObjectId());
@@ -79,17 +76,10 @@ TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).take(5).flat
 TaskObservable.deferNonNull():
 
 ```java
-Task<String> helloTask = Task.forResult("Hello, world!");
-
-TaskObservable.deferNonNull(() -> helloTask).subscribe(it -> {
-  System.out.println(it);
-});
-
 Task<String> nullTask = Task.forResult(null);
 TaskObservable.deferNonNull(() -> nullTask).subscribe(it -> {}, e -> {
   e.printStackTrace(); // NullPointerException
 });
-
 ```
 
 ### Error handling
