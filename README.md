@@ -1,9 +1,12 @@
 # RxBolts
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-green.svg?style=flat)](https://android-arsenal.com/details/1/2645)
 [![JitPack](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=JitPack)](https://jitpack.io/#yongjhih/RxBolts)
-[![javadoc.io](https://javadocio-badges.herokuapp.com/com.infstory/rxbolts/badge.svg)](http://www.javadoc.io/doc/com.infstory/rxbolts/)
+[![Download](https://api.bintray.com/packages/yongjhih/maven/rxbolts/images/download.svg) ](https://bintray.com/yongjhih/maven/rxbolts/_latestVersion)
+[![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/1.0.0/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/RxBolts.svg)](https://travis-ci.org/yongjhih/RxBolts)
 [![Join the chat at https://gitter.im/yongjhih/RxBolts](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/RxBolts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<!--[![javadoc.io](https://javadocio-badges.herokuapp.com/com.infstory/rxbolts/badge.svg)](http://www.javadoc.io/doc/com.infstory/rxbolts/)-->
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/RxBolts/images/download.svg) ](https://bintray.com/yongjhih/maven/RxBolts/_latestVersion)-->
 <!--[![Bountysource](https://www.bountysource.com/badge/team?team_id=43965&style=bounties_posted)](https://www.bountysource.com/teams/8tory/bounties?utm_source=8tory&utm_medium=shield&utm_campaign=bounties_posted)-->
