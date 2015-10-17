@@ -83,3 +83,4 @@ publish {
     dryRun = false
 }
 
+apply from: 'javadoc.gradle'
