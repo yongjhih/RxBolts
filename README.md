@@ -11,7 +11,7 @@
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/RxBolts/images/download.svg) ](https://bintray.com/yongjhih/maven/RxBolts/_latestVersion)-->
 <!--[![Bountysource](https://www.bountysource.com/badge/team?team_id=43965&style=bounties_posted)](https://www.bountysource.com/teams/8tory/bounties?utm_source=8tory&utm_medium=shield&utm_campaign=bounties_posted)-->
 
-[![rxbolts.png](art/rxbolts.png)](art/rxbolts.png)
+[![rxbolts-gray-fg-blue-bg.png](art/rxbolts-gray-fg-blue-bg.png)](art/rxbolts-gray-fg-blue-bg.png)
 
 Reactive [Bolts-Android](https://github.com/BoltsFramework/Bolts-Android). Allow convert `Task<T>` to `Observable<T>`.
 
@@ -132,6 +132,8 @@ dependencies {
 
 * https://github.com/BoltsFramework/Bolts-Android
 * https://github.com/yongjhih/RxParse
+
+<!-- http://www.norio.be/android-feature-graphic-generator/?config=%7B%22background%22%3A%7B%22color%22%3A%22%233b5fad%22%2C%22gradient%22%3A%7B%22type%22%3A%22radial%22%2C%22radius%22%3A%22915%22%2C%22angle%22%3A%22vertical%22%2C%22color%22%3A%22%23000000%22%7D%7D%2C%22title%22%3A%7B%22text%22%3A%22%22%2C%22color%22%3A%22%23ffffff%22%2C%22size%22%3A200%2C%22font%22%3A%7B%22family%22%3Anull%2C%22effect%22%3A%22bold%22%7D%7D%2C%22subtitle%22%3A%7B%22text%22%3A%22%22%2C%22color%22%3A%22%23ffffff%22%2C%22size%22%3A100%2C%22font%22%3A%7B%22family%22%3Anull%2C%22effect%22%3A%22normal%22%7D%7D%2C%22image%22%3A%7B%22position%22%3A%22100%22%2C%22file%22%3A%7B%7D%7D%2C%22size%22%3A%22custom%22%7D -->
 
 ## LICENSE
 
