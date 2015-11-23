@@ -86,8 +86,7 @@ TaskObservable.deferNonNull(() -> Task.forResult(null)).subscribe(it -> {}, e ->
 Failed:
 
 ```java
-Task<String> failedTask = Task.forError(new RuntimeException("An error message."));
-TaskObservable.defer(() -> failedTask).subscribe(it -> {}, e -> {
+TaskObservable.defer(() -> Task.forError(new RuntimeException("An error message."))).subscribe(it -> {}, e -> {
   e.printStackTrace(); // RuntimeException
 });
 ```
