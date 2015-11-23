@@ -20,8 +20,7 @@ Reactive [Bolts-Android](https://github.com/BoltsFramework/Bolts-Android). Allow
 TaskObservable.defer():
 
 ```java
-Task<String> helloTask = Task.forResult("Hello, world!");
-TaskObservable.defer(() -> helloTask).subscribe(it -> {
+TaskObservable.defer(() -> Task.forResult("Hello, world!")).subscribe(it -> {
   System.out.println(it);
 });
 ```
@@ -48,8 +47,7 @@ TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).flatMap(Obse
 TaskObservable.defer():
 
 ```java
-Task<String> nullTask = Task.forResult(null);
-TaskObservable.defer(() -> nullTask).subscribe(it -> {}, e -> {}, () -> {
+TaskObservable.defer(() -> Task.forResult(null)).subscribe(it -> {}, e -> {}, () -> {
   System.out.println("onCompleted");
 });
 ```
@@ -57,8 +55,7 @@ TaskObservable.defer(() -> nullTask).subscribe(it -> {}, e -> {}, () -> {
 TaskObservable.deferNullable():
 
 ```java
-Task<String> nullTask = Task.forResult(null);
-TaskObservable.deferNullable(() -> nullTask).subscribe(it -> {
+TaskObservable.deferNullable(() -> Task.forResult(null)).subscribe(it -> {
   System.out.println(it); // print null
 });
 ```
@@ -79,8 +76,7 @@ TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).flatMap(Obse
 TaskObservable.deferNonNull():
 
 ```java
-Task<String> nullTask = Task.forResult(null);
-TaskObservable.deferNonNull(() -> nullTask).subscribe(it -> {}, e -> {
+TaskObservable.deferNonNull(() -> Task.forResult(null)).subscribe(it -> {}, e -> {
   e.printStackTrace(); // NullPointerException
 });
 ```
