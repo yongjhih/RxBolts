@@ -32,6 +32,10 @@ import rx.observables.*;
  * TaskObservable
  */
 public class TaskObservable {
+    
+    public static <R> Task<R> forTask(final Observable<R> sub){
+        return sub.map(r -> Task.forResult(r)).toBlocking().single();
+    }
 
     public static <R> Observable<R> just(Task<R> task, boolean nullable) {
         return Observable.create(sub -> {
