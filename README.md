@@ -5,6 +5,7 @@
 [![Download](https://api.bintray.com/packages/yongjhih/maven/rxbolts/images/download.svg) ](https://bintray.com/yongjhih/maven/rxbolts/_latestVersion)
 [![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/1.0.0/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/RxBolts.svg)](https://travis-ci.org/yongjhih/RxBolts)
+<a href="http://www.methodscount.com/?lib=com.infstory%3Arxbolts%3A1.0.0"><img src="https://img.shields.io/badge/Methods and size-core: 54 | deps: 4111 | 6 KB-e91e63.svg"></img></a>
 [![Join the chat at https://gitter.im/yongjhih/RxBolts](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/RxBolts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <!--[![javadoc.io](https://javadocio-badges.herokuapp.com/com.infstory/rxbolts/badge.svg)](http://www.javadoc.io/doc/com.infstory/rxbolts/)-->
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
