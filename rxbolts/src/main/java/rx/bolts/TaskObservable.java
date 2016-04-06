@@ -34,9 +34,7 @@ import rx.observables.*;
 public class TaskObservable {
 
     public static <R> Task<R> forTask(final Observable<R> obs){
-        final Task<R>.TaskCompletionSource tcs = Task.create();
-        obs.singleOrDefault(null).subscribe(o -> tcs.setResult(o), e -> tcs.setError(new Exception(e)));
-        return tcs.getTask();
+        return Task.callInBackground(() -> obs.toBlocking().singleOrDefault(null));
     }
 
     public static <R> Observable<R> just(Task<R> task, boolean nullable) {
