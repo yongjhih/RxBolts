@@ -5,14 +5,16 @@ buildscript {
 
     dependencies {
         classpath 'me.tatarka:gradle-retrolambda:2.5.0'
-        classpath 'com.android.tools.build:gradle:1.1.2'
         classpath 'com.novoda:bintray-release:0.3.4'
     }
 }
 
-apply plugin: 'com.android.library'
+apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'me.tatarka.retrolambda'
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
 
 retrolambda {
     // ```bash
@@ -32,25 +34,10 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 22
-    }
-}
-
 dependencies {
     compile 'io.reactivex:rxjava:1.0.7'
 
-    compile 'com.parse.bolts:bolts-android:1.4.0'
+    compile 'com.parse.bolts:bolts-tasks:1.4.0'
 
     //testCompile "org.mockito:mockito-core:1.+"
 }
@@ -73,8 +60,8 @@ publish {
     userOrg = 'yongjhih'
     groupId = 'com.infstory'
     artifactId = 'rxbolts'
-    publishVersion = '1.0.0'
-    desc = 'Reactive Bolts-Android.'
+    publishVersion = '1.0.1'
+    desc = 'Reactive Bolts.'
     website = 'https://github.com/yongjhih/RxBolts'
     bintrayUser = getRepositoryUsername()
     bintrayKey = getRepositoryPassword()
