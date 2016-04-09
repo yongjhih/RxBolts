@@ -92,6 +92,17 @@ TaskObservable.defer(() -> Task.forError(new RuntimeException("An error message.
 });
 ```
 
+## AppLinks
+
+```java
+AppLinkObservable.navigate(context, url, resolver);
+```
+
+```java
+AppLinkNavigation.setDefaultResolver(resolver);
+AppLinkObservable.navigate(context, url);
+```
+
 ## Sample code
 
 * https://github.com/yongjhih/RxParse/blob/master/rxparse/src/main/java/rx/parse/ParseObservable.java
