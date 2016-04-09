@@ -1,7 +1,7 @@
 language: android
 jdk:
-    - openjdk7
-    - openjdk8
+    - oraclejdk7
+    - oraclejdk8
 android:
   components:
     - build-tools-22.0.1
@@ -9,8 +9,8 @@ android:
     - extra-android-support
     - extra-android-m2repository
 before_install:
-    - export JAVA7_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-    - export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
+    - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
     - export JAVA_HOME=$JAVA8_HOME
 script:
     - ./gradlew clean assemble check
