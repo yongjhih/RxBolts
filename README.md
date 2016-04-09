@@ -120,8 +120,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.yongjhih.rxbolts:rxbolts:-SNAPSHOT'
-    compile 'com.github.yongjhih.rxbolts:rxbolts-applinks:-SNAPSHOT'
+    compile 'com.github.yongjhih.RxBolts:rxbolts:-SNAPSHOT'
+    compile 'com.github.yongjhih.RxBolts:rxbolts-applinks:-SNAPSHOT'
 }
 ```
 
