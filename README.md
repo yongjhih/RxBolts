@@ -118,7 +118,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.infstory:rxbolts:1.0.0'
+    compile 'com.infstory:rxbolts:1.0.1'
 }
 ```
 
@@ -131,8 +131,9 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.yongjhih.RxBolts:rxbolts:-SNAPSHOT'
-    compile 'com.github.yongjhih.RxBolts:rxbolts-applinks:-SNAPSHOT'
+    compile 'com.github.yongjhih.RxBolts:rxbolts-android:-SNAPSHOT'
+    //compile 'com.github.yongjhih.RxBolts:rxbolts:-SNAPSHOT'
+    //compile 'com.github.yongjhih.RxBolts:rxbolts-applinks:-SNAPSHOT'
 }
 ```
 
