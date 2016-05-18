@@ -11,7 +11,6 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 apply plugin: 'me.tatarka.retrolambda'
 
 retrolambda {
@@ -76,4 +75,5 @@ publish {
     dryRun = false
 }
 
+apply plugin: 'maven'
 apply from: 'javadoc.gradle'

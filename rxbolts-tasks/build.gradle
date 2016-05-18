@@ -10,7 +10,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'maven'
 apply plugin: 'me.tatarka.retrolambda'
 
 targetCompatibility = '1.8'
@@ -69,4 +68,5 @@ publish {
     dryRun = false
 }
 
+apply plugin: 'maven'
 apply from: 'javadoc.gradle'
