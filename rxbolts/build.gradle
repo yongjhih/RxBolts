@@ -4,27 +4,18 @@ buildscript {
     }
 
     dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
         classpath 'me.tatarka:gradle-retrolambda:2.5.0'
         classpath 'com.novoda:bintray-release:0.3.4'
     }
 }
 
-apply plugin: 'java'
+apply plugin: 'com.android.library'
 apply plugin: 'maven'
 apply plugin: 'me.tatarka.retrolambda'
 
-targetCompatibility = '1.8'
-sourceCompatibility = '1.8'
-
 retrolambda {
-    // ```bash
-    // export JAVA8_HOME="/usr/lib/jvm/java-8-oracle"
-    // export JAVA7_HOME="/usr/lib/jvm/java-7-oracle"
-    // export JAVA_HOME="$JAVA8_HOME"
-    // ```
-    //jvmArgs '-noverify'
     jdk System.getenv("JAVA8_HOME")
-    //oldJdk System.getenv("JAVA_HOME")
     oldJdk System.getenv("JAVA7_HOME")
     javaVersion JavaVersion.VERSION_1_7
 }
@@ -34,13 +25,26 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-dependencies {
-    compile 'io.reactivex:rxjava:1.0.7'
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
-    compile 'com.parse.bolts:bolts-tasks:1.4.0'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 22
+    }
+}
+
+dependencies {
+    compile project(':rxbolts-tasks')
+    compile project(':rxbolts-applinks')
 
     //testCompile "org.mockito:mockito-core:1.+"
-    //testCompile 'com.github.ubiratansoares:rxassertions:0.2.0'
 }
 
 tasks.withType(JavaCompile) {
@@ -61,8 +65,8 @@ publish {
     userOrg = 'yongjhih'
     groupId = 'com.infstory'
     artifactId = 'rxbolts'
-    publishVersion = '1.0.1'
-    desc = 'Reactive Bolts.'
+    publishVersion = '1.0.2'
+    desc = 'Reactive Bolts-Android.'
     website = 'https://github.com/yongjhih/RxBolts'
     bintrayUser = getRepositoryUsername()
     bintrayKey = getRepositoryPassword()

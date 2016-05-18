@@ -45,7 +45,7 @@ dependencies {
 
     compile 'com.parse.bolts:bolts-tasks:1.4.0'
     compile 'com.parse.bolts:bolts-applinks:1.4.0'
-    compile project(':rxbolts')
+    compile project(':rxbolts-tasks')
 
     //testCompile "org.mockito:mockito-core:1.+"
 }
@@ -68,7 +68,7 @@ publish {
     userOrg = 'yongjhih'
     groupId = 'com.infstory'
     artifactId = 'rxbolts-applinks'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.2'
     desc = 'Reactive Bolts-Android.'
     website = 'https://github.com/yongjhih/RxBolts'
     bintrayUser = getRepositoryUsername()
