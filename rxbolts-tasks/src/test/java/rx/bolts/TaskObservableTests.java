@@ -42,12 +42,12 @@ public class TaskObservableTests {
 
     @Test
     public void just() {
-        assertThat(TaskObservable.<String>just(Task.<String>forResult(null)))
+        assertThat(TaskObservable.just(Task.<String>forResult(null)))
             .withoutErrors()
             .emitsNothing()
             .completes();
 
-        assertThat(TaskObservable.<String>just(Task.<String>forResult("hello")))
+        assertThat(TaskObservable.just(Task.forResult("hello")))
             .withoutErrors()
             .expectedValues("hello")
             .completes();
@@ -55,7 +55,7 @@ public class TaskObservableTests {
 
     @Test
     public void justNullable() {
-        assertThat(TaskObservable.<String>justNullable(Task.<String>forResult(null)))
+        assertThat(TaskObservable.justNullable(Task.<String>forResult(null)))
             .withoutErrors()
             .expectedValues((String) null)
             .completes();
@@ -63,12 +63,12 @@ public class TaskObservableTests {
 
     @Test
     public void defer() {
-        assertThat(TaskObservable.<String>defer(() -> Task.<String>forResult(null)))
+        assertThat(TaskObservable.defer(() -> Task.<String>forResult(null)))
             .withoutErrors()
             .emitsNothing()
             .completes();
 
-        assertThat(TaskObservable.<String>defer(() -> Task.<String>forResult("hello")))
+        assertThat(TaskObservable.defer(() -> Task.forResult("hello")))
             .withoutErrors()
             .expectedValues("hello")
             .completes();
@@ -76,7 +76,7 @@ public class TaskObservableTests {
 
     @Test
     public void deferNullable() {
-        assertThat(TaskObservable.<String>deferNullable(() -> Task.<String>forResult(null)))
+        assertThat(TaskObservable.deferNullable(() -> Task.<String>forResult(null)))
             .withoutErrors()
             .expectedValues((String) null)
             .completes();
@@ -84,7 +84,7 @@ public class TaskObservableTests {
 
     @Test
     public void deferNonNull() {
-        assertThat(TaskObservable.<String>deferNonNull(() -> Task.<String>forResult(null)))
+        assertThat(TaskObservable.deferNonNull(() -> Task.<String>forResult(null)))
             .failsWithThrowable(NullPointerException.class);
     }
 
