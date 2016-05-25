@@ -26,20 +26,67 @@ import java.util.List;
 
 import bolts.Task;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.doReturn;
-import static mocker.Mocker.mocker;
-import mocker.Mocker;
+//import static org.mockito.Matchers.any;
+//import static org.mockito.Mockito.mock;
+//import static org.mockito.Mockito.times;
+//import static org.mockito.Mockito.verify;
+//import static org.mockito.Mockito.when;
+//import static org.mockito.Mockito.doReturn;
+//import static mocker.Mocker.mocker;
+//import mocker.Mocker;
+import static rx.assertions.RxAssertions.assertThat;
 
 import rx.Observable;
 
 public class TaskObservableTests {
 
     @Test
-    public void defer() {
+    public void just() {
+        assertThat(TaskObservable.<String>just(Task.<String>forResult(null)))
+            .withoutErrors()
+            .emitsNothing()
+            .completes();
+
+        assertThat(TaskObservable.<String>just(Task.<String>forResult("hello")))
+            .withoutErrors()
+            .expectedValues("hello")
+            .completes();
     }
+
+    @Test
+    public void justNullable() {
+        assertThat(TaskObservable.<String>justNullable(Task.<String>forResult(null)))
+            .withoutErrors()
+            .expectedValues((String) null)
+            .completes();
+    }
+
+    @Test
+    public void defer() {
+        assertThat(TaskObservable.<String>defer(() -> Task.<String>forResult(null)))
+            .withoutErrors()
+            .emitsNothing()
+            .completes();
+
+        assertThat(TaskObservable.<String>defer(() -> Task.<String>forResult("hello")))
+            .withoutErrors()
+            .expectedValues("hello")
+            .completes();
+    }
+
+    @Test
+    public void deferNullable() {
+        assertThat(TaskObservable.<String>deferNullable(() -> Task.<String>forResult(null)))
+            .withoutErrors()
+            .expectedValues((String) null)
+            .completes();
+    }
+
+    @Test
+    public void deferNonNull() {
+        assertThat(TaskObservable.<String>deferNonNull(() -> Task.<String>forResult(null)))
+            .failsWithThrowable(NullPointerException.class);
+    }
+
+
 }
