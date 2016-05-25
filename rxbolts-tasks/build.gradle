@@ -76,6 +76,15 @@ publish {
 apply plugin: 'maven'
 apply from: 'javadoc.gradle'
 
+apply plugin: 'jacoco'
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
+
 apply plugin: 'com.github.kt3k.coveralls'
 
 coveralls {
@@ -84,6 +93,10 @@ coveralls {
 
 tasks.coveralls {
     dependsOn 'jacocoTestReport'
+}
+
+tasks.jacocoTestReport {
+    dependsOn 'test'
 }
 
 tasks.withType(Test) {

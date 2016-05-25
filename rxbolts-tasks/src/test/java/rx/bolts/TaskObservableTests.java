@@ -16,14 +16,7 @@
 
 package rx.bolts;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import bolts.Task;
 
 //import static org.mockito.Matchers.any;
@@ -35,8 +28,6 @@ import bolts.Task;
 //import static mocker.Mocker.mocker;
 //import mocker.Mocker;
 import static rx.assertions.RxAssertions.assertThat;
-
-import rx.Observable;
 
 public class TaskObservableTests {
 

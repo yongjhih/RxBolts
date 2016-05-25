@@ -16,30 +16,41 @@
 
 package rx.bolts;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import bolts.Task;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.doReturn;
-import static mocker.Mocker.mocker;
-import mocker.Mocker;
+//import static org.mockito.Matchers.any;
+//import static org.mockito.Mockito.mock;
+//import static org.mockito.Mockito.times;
+//import static org.mockito.Mockito.verify;
+//import static org.mockito.Mockito.when;
+//import static org.mockito.Mockito.doReturn;
+//import static mocker.Mocker.mocker;
+//import mocker.Mocker;
 
-import rx.Observable;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
 
+//import rx.Observable;
+
+@RunWith(RobolectricTestRunner.class) //
 public class AppLinkObservableTests {
 
     @Test
-    public void defer() {
+    public void navigate() {
+        //final Application application = RuntimeEnvironment.application;
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(application, java.lang.String destinationUrl) {
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
+    }
+
+    @Test
+    public void getAppLink() {
+        //final Application application = RuntimeEnvironment.application;
+        //public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
     }
 }
