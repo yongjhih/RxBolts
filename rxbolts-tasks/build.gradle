@@ -6,7 +6,6 @@ buildscript {
     dependencies {
         classpath 'me.tatarka:gradle-retrolambda:2.5.0'
         classpath 'com.novoda:bintray-release:0.3.4'
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
     }
 }
 
@@ -76,33 +75,23 @@ publish {
 apply plugin: 'maven'
 apply from: 'javadoc.gradle'
 
-apply plugin: 'jacoco'
-
-jacocoTestReport {
-    reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
-    }
-}
-
-apply plugin: 'com.github.kt3k.coveralls'
-
-coveralls {
-    jacocoReportPath "$buildDir/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
-}
-
-tasks.coveralls {
-    dependsOn 'jacocoTestReport'
-}
-
-tasks.jacocoTestReport {
-    dependsOn 'test'
-}
-
 tasks.withType(Test) {
   testLogging {
     exceptionFormat "full"
     events "passed", "skipped", "failed", "standardOut", "standardError"
     showStandardStreams = true
   }
+}
+
+apply plugin: 'jacoco'
+
+jacocoTestReport {
+    //additionalSourceDirs = files(sourceSets.main.allSource.srcDirs)
+    //sourceDirectories = files(sourceSets.main.allSource.srcDirs)
+    //classDirectories = files(sourceSets.main.output)
+
+    reports {
+        xml.enabled = true // coveralls needed
+        html.enabled = true
+    }
 }
