@@ -1,12 +1,14 @@
 # RxBolts
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-green.svg?style=flat)](https://android-arsenal.com/details/1/2645)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/2645)
 [![JitPack](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=JitPack)](https://jitpack.io/#yongjhih/RxBolts)
 [![Download](https://api.bintray.com/packages/yongjhih/maven/rxbolts/images/download.svg) ](https://bintray.com/yongjhih/maven/rxbolts/_latestVersion)
-[![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/1.0.0/javadoc/)
+[![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/-SNAPSHOT/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/RxBolts.svg)](https://travis-ci.org/yongjhih/RxBolts)
-<a href="http://www.methodscount.com/?lib=com.infstory%3Arxbolts%3A1.0.0"><img src="https://img.shields.io/badge/Methods and size-core: 54 | deps: 4111 | 6 KB-e91e63.svg"></img></a>
-[![Join the chat at https://gitter.im/yongjhih/RxBolts](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/RxBolts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Methods Count](https://img.shields.io/badge/Methods and size-core: 54 | deps: 4111 | 6 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.infstory%3Arxbolts%3A1.0.0)
+[![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/RxBolts.svg)](https://gitter.im/yongjhih/RxBolts)
+[![Coverage Status](https://coveralls.io/repos/github/yongjhih/RxBolts/badge.svg)](https://coveralls.io/github/yongjhih/RxBolts)
+<!--[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c624b6f3c24d47b4917768c70e951dc2)](https://codacy.com/app/yongjhih/RxBolts)-->
 <!--[![javadoc.io](https://javadocio-badges.herokuapp.com/com.infstory/rxbolts/badge.svg)](http://www.javadoc.io/doc/com.infstory/rxbolts/)-->
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/RxBolts/images/download.svg) ](https://bintray.com/yongjhih/maven/RxBolts/_latestVersion)-->
