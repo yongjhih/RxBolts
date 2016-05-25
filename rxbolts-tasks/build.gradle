@@ -86,10 +86,6 @@ tasks.coveralls {
     dependsOn 'jacocoTestReport'
 }
 
-tasks.jacocoTestReport {
-    dependsOn 'test'
-}
-
 tasks.withType(Test) {
   testLogging {
     exceptionFormat "full"
