@@ -48,7 +48,7 @@ public class TaskObservableTests {
 
     @Test
     public void justDefer() {
-        assertThat(TaskObservable.defer(() -> Task.<String>forResult(null)))
+        assertThat(TaskObservable.just(() -> Task.<String>forResult(null)))
             .withoutErrors()
             .emitsNothing()
             .completes();
