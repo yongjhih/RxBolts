@@ -8,7 +8,7 @@
 [![Methods Count](https://img.shields.io/badge/Methods and size-core: 54 | deps: 4111 | 6 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.infstory%3Arxbolts%3A1.0.0)
 [![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/RxBolts.svg)](https://gitter.im/yongjhih/RxBolts)
 [![Coverage Status](https://coveralls.io/repos/github/yongjhih/RxBolts/badge.svg)](https://coveralls.io/github/yongjhih/RxBolts)
-<!--[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c624b6f3c24d47b4917768c70e951dc2)](https://codacy.com/app/yongjhih/RxBolts)-->
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/05a9b9b101b24073bc021f41bafc5090)](https://codacy.com/app/yongjhih/RxBolts)
 <!--[![javadoc.io](https://javadocio-badges.herokuapp.com/com.infstory/rxbolts/badge.svg)](http://www.javadoc.io/doc/com.infstory/rxbolts/)-->
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/RxBolts/images/download.svg) ](https://bintray.com/yongjhih/maven/RxBolts/_latestVersion)-->
