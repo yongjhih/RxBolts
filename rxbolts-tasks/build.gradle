@@ -88,7 +88,7 @@ jacocoTestReport {
 apply plugin: 'com.github.kt3k.coveralls'
 
 coveralls {
-    jacocoReportPath "$buildDir/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+    jacocoReportPath "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
 }
 
 tasks.coveralls {
