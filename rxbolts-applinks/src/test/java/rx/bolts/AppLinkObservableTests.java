@@ -17,7 +17,7 @@
 package rx.bolts;
 
 import org.junit.Test;
-import bolts.Task;
+//import bolts.Task;
 
 //import static org.mockito.Matchers.any;
 //import static org.mockito.Mockito.mock;
@@ -30,7 +30,7 @@ import bolts.Task;
 
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
+//import org.robolectric.RuntimeEnvironment;
 
 //import rx.Observable;
 
