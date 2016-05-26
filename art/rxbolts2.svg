@@ -16,10 +16,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="rxbolts.svg"
-   inkscape:export-filename="rxbotls.png"
-   inkscape:export-xdpi="60"
-   inkscape:export-ydpi="60">
+   sodipodi:docname="rxbolts2.svg"
+   inkscape:export-filename="rxbotls2.png"
+   inkscape:export-xdpi="88.053337"
+   inkscape:export-ydpi="88.053337">
   <defs
      id="defs4">
     <filter
@@ -56,9 +56,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="415.7845"
-     inkscape:cy="268.58839"
+     inkscape:zoom="0.7"
+     inkscape:cx="146.74461"
+     inkscape:cy="249.09404"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,7 +79,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

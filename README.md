@@ -14,7 +14,7 @@
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/RxBolts/images/download.svg) ](https://bintray.com/yongjhih/maven/RxBolts/_latestVersion)-->
 <!--[![Bountysource](https://www.bountysource.com/badge/team?team_id=43965&style=bounties_posted)](https://www.bountysource.com/teams/8tory/bounties?utm_source=8tory&utm_medium=shield&utm_campaign=bounties_posted)-->
 
-[![rxbolts-gray-fg-blue-bg.png](art/rxbolts-gray-fg-blue-bg.png)](art/rxbolts-gray-fg-blue-bg.png)
+![](art/rxbolts2.png)
 
 Reactive [Bolts-Android](https://github.com/BoltsFramework/Bolts-Android). Allow convert `Task<T>` to `Observable<T>`.
 
