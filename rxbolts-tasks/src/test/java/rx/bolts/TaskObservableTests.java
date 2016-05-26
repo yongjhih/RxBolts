@@ -28,6 +28,8 @@ import bolts.Task;
 //import static mocker.Mocker.mocker;
 //import mocker.Mocker;
 import static rx.assertions.RxAssertions.assertThat;
+import org.assertj.core.api.Assertions;
+import rx.Observable;
 
 public class TaskObservableTests {
 
@@ -41,6 +43,14 @@ public class TaskObservableTests {
         assertThat(TaskObservable.just(Task.forResult("hello")))
             .withoutErrors()
             .expectedValues("hello")
+            .completes();
+    }
+
+    @Test
+    public void justDefer() {
+        assertThat(TaskObservable.defer(() -> Task.<String>forResult(null)))
+            .withoutErrors()
+            .emitsNothing()
             .completes();
     }
 
@@ -79,5 +89,9 @@ public class TaskObservableTests {
             .failsWithThrowable(NullPointerException.class);
     }
 
+    @Test
+    public void forTask() {
+        Assertions.assertThat(TaskObservable.forTask(Observable.empty()).getResult()).isNull();
+    }
 
 }
