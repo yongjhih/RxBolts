@@ -3,7 +3,7 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxBolts-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/2645)
 [![JitPack](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=JitPack)](https://jitpack.io/#yongjhih/RxBolts)
 [![Download](https://api.bintray.com/packages/yongjhih/maven/rxbolts/images/download.svg) ](https://bintray.com/yongjhih/maven/rxbolts/_latestVersion)
-[![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/-SNAPSHOT/javadoc/)
+[![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/rxbolts-tasks/-SNAPSHOT/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/RxBolts.svg)](https://travis-ci.org/yongjhih/RxBolts)
 [![Methods Count](https://img.shields.io/badge/Methods and size-core: 54 | deps: 4111 | 6 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.infstory%3Arxbolts%3A1.0.0)
 [![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/RxBolts.svg)](https://gitter.im/yongjhih/RxBolts)
@@ -95,6 +95,8 @@ TaskObservable.defer(() -> Task.forError(new RuntimeException("An error message.
 ```
 
 ## AppLinks
+
+[![javadoc](https://img.shields.io/github/tag/yongjhih/RxBolts.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/RxBolts/rxbolts-applinks/-SNAPSHOT/javadoc/)
 
 ```java
 AppLinkObservable.navigate(context, url, resolver);
