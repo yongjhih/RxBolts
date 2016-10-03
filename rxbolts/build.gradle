@@ -83,7 +83,7 @@ publish {
     userOrg = 'yongjhih'
     groupId = 'com.infstory'
     artifactId = 'rxbolts'
-    publishVersion = '1.0.2'
+    publishVersion = '1.0.3'
     desc = 'Reactive Bolts-Android.'
     website = 'https://github.com/yongjhih/RxBolts'
     bintrayUser = getRepositoryUsername()
