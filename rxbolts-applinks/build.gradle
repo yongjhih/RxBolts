@@ -38,6 +38,8 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 22
+
+        consumerProguardFiles fileTree(dir: '.', include: '*.pro')
     }
 
     buildTypes {
@@ -84,7 +86,7 @@ publish {
     userOrg = 'yongjhih'
     groupId = 'com.infstory'
     artifactId = 'rxbolts-applinks'
-    publishVersion = '1.0.2'
+    publishVersion = '1.0.3'
     desc = 'Reactive Bolts-Android.'
     website = 'https://github.com/yongjhih/RxBolts'
     bintrayUser = getRepositoryUsername()
