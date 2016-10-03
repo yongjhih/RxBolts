@@ -141,6 +141,14 @@ dependencies {
 }
 ```
 
+## Development and deploy to jcenter
+
+rxbolts:
+
+```
+./gradlew :rxbolts:build :rxbolts:bintrayUpload
+```
+
 ## See Also
 
 
