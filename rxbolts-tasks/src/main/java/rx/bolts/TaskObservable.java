@@ -40,6 +40,8 @@ public class TaskObservable {
     public static <R> Observable<R> just(Task<R> task, boolean nullable) {
         return Observable.create(sub -> {
             task.continueWith(t -> {
+                if (sub.isUnsubscribed()) return null;
+
                 if (t.isCancelled()) {
                     // NOTICE: doOnUnsubscribe(() -> Observable.just(query) in outside
                     sub.unsubscribe(); //sub.onCompleted();?
