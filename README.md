@@ -45,45 +45,6 @@ TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).flatMap(Obse
 }).subscribe();
 ```
 
-### Null task handling
-
-TaskObservable.defer():
-
-```java
-TaskObservable.defer(() -> Task.forResult(null)).subscribe(it -> {}, e -> {}, () -> {
-  System.out.println("onCompleted");
-});
-```
-
-TaskObservable.deferNullable():
-
-```java
-TaskObservable.deferNullable(() -> Task.forResult(null)).subscribe(it -> {
-  System.out.println(it); // print null
-});
-```
-
-TaskObservable.deferNullable() for printing updated location of 5 users:
-
-```java
-TaskObservable.defer(() -> ParseUser.getQuery().findInBackground()).flatMap(Observable::from).take(5).flatMap(user -> {
-  user.put("location", "Taipei");
-  // ParseUser.saveInBackground() returns Task<Void> conatins null
-  // Allow omit null with TaskObservable.deferNullable()
-  return TaskObservable.deferNullable(() -> user.saveInBackground()).map(it -> user);
-}).subscribe(user -> {
-  System.out.println(user.getObjectId());
-});
-```
-
-TaskObservable.deferNonNull():
-
-```java
-TaskObservable.deferNonNull(() -> Task.forResult(null)).subscribe(it -> {}, e -> {
-  e.printStackTrace(); // NullPointerException
-});
-```
-
 ### Error handling
 
 Failed:
@@ -113,6 +74,25 @@ AppLinkObservable.navigate(context, url);
 
 ## Installation
 
+### For RxJava2
+
+Via jitpack.io
+
+```gradle
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'com.github.yongjhih.RxBolts:rxbolts2:-SNAPSHOT'
+    //compile 'com.github.yongjhih.RxBolts:rxbolts2-taks:-SNAPSHOT'
+    //compile 'com.github.yongjhih.RxBolts:rxbolts2-applinks:-SNAPSHOT'
+}
+```
+
+### For RxJava1
+
 via jcenter
 
 ```gradle
@@ -135,8 +115,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.yongjhih.RxBolts:rxbolts-android:-SNAPSHOT'
-    //compile 'com.github.yongjhih.RxBolts:rxbolts:-SNAPSHOT'
+    compile 'com.github.yongjhih.RxBolts:rxbolts:-SNAPSHOT'
+    //compile 'com.github.yongjhih.RxBolts:rxbolts-tasks:-SNAPSHOT'
     //compile 'com.github.yongjhih.RxBolts:rxbolts-applinks:-SNAPSHOT'
 }
 ```
