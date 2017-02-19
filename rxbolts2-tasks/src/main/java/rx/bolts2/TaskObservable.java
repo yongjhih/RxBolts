@@ -48,7 +48,7 @@ public class TaskObservable {
                     emitter.onError(error);
                 } else {
                     R r = t.getResult();
-                    emitter.onNext(r);
+                    if (r != null) emitter.onNext(r);
                     emitter.onComplete();
                 }
                 return null;
