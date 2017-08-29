@@ -17,29 +17,44 @@
 package rx.bolts2;
 
 import bolts.*;
-import io.reactivex.Observable;
+import io.reactivex.Single;
+import io.reactivex.annotations.CheckReturnValue;
+import io.reactivex.annotations.NonNull;
 
 public class AppLinkObservable {
-    public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl) {
-        return TaskObservable.defer(() -> AppLinkNavigation.navigateInBackground(context, destinationUrl));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl) {
+        return RxTask.single(() -> AppLinkNavigation.navigateInBackground(context, destinationUrl));
     }
-    public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
-        return TaskObservable.defer(() -> AppLinkNavigation.navigateInBackground(context, destinationUrl, resolver));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.lang.String destinationUrl, AppLinkResolver resolver) {
+        return RxTask.single(() -> AppLinkNavigation.navigateInBackground(context, destinationUrl, resolver));
     }
-    public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, android.net.Uri destination) {
-        return TaskObservable.defer(() -> AppLinkNavigation.navigateInBackground(context, destination));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, android.net.Uri destination) {
+        return RxTask.single(() -> AppLinkNavigation.navigateInBackground(context, destination));
     }
-    public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, android.net.Uri destination, AppLinkResolver resolver) {
-        return TaskObservable.defer(() -> AppLinkNavigation.navigateInBackground(context, destination, resolver));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, android.net.Uri destination, AppLinkResolver resolver) {
+        return RxTask.single(() -> AppLinkNavigation.navigateInBackground(context, destination, resolver));
     }
-    public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.net.URL destination) {
-        return TaskObservable.defer(() -> AppLinkNavigation.navigateInBackground(context, destination));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.net.URL destination) {
+        return RxTask.single(() -> AppLinkNavigation.navigateInBackground(context, destination));
     }
-    public static Observable<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.net.URL destination, AppLinkResolver resolver) {
-        return TaskObservable.defer(() -> AppLinkNavigation.navigateInBackground(context, destination, resolver));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLinkNavigation.NavigationResult> navigate(android.content.Context context, java.net.URL destination, AppLinkResolver resolver) {
+        return RxTask.single(() -> AppLinkNavigation.navigateInBackground(context, destination, resolver));
     }
-
-    public static Observable<AppLink> getAppLink(AppLinkResolver resolver, android.net.Uri url) {
-        return TaskObservable.defer(() -> resolver.getAppLinkFromUrlInBackground(url));
+    @CheckReturnValue
+    @NonNull
+    public static Single<AppLink> getAppLink(AppLinkResolver resolver, android.net.Uri url) {
+        return RxTask.single(() -> resolver.getAppLinkFromUrlInBackground(url));
     }
 }

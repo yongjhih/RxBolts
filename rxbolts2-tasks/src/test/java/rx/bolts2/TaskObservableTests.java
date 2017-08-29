@@ -29,12 +29,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TaskObservableTests {
 
     @Test
-    public void just() {
-        TaskObservable.just(Task.<String>forResult(null))
+    public void single() {
+        RxTask.single(Task.<String>forResult(null))
                 .test()
                 .assertError(NullPointerException.class);
 
-        TaskObservable.just(Task.forResult("hello"))
+        RxTask.single(Task.forResult("hello"))
                 .test()
                 .assertValue(check(v -> assertThat(v).isEqualTo("hello")))
                 .assertNoErrors()
@@ -42,8 +42,33 @@ public class TaskObservableTests {
     }
 
     @Test
-    public void forTask() {
-        assertThat(TaskObservable.forTask(Observable.empty()).getResult()).isNull();
+    public void completable() {
+        RxTask.completable(Task.<String>forResult(null))
+                .test()
+                .assertError(NullPointerException.class);
+
+        RxTask.completable(Task.forResult("hello"))
+                .test()
+                .assertValue(check(v -> assertThat(v).isEqualTo("hello")))
+                .assertNoErrors()
+                .assertComplete();
+    }
+    @Test
+    public void observable() {
+        RxTask.observable(Task.<String>forResult(null))
+                .test()
+                .assertError(NullPointerException.class);
+
+        RxTask.observable(Task.forResult("hello"))
+                .test()
+                .assertValue(check(v -> assertThat(v).isEqualTo("hello")))
+                .assertNoErrors()
+                .assertComplete();
+    }
+
+    @Test
+    public void forTaskObservable() {
+        assertThat(RxTask.forTask(Observable.empty()).getResult()).isNull();
     }
 
     public static <T> Predicate<T> check(Consumer<T> consumer) {
